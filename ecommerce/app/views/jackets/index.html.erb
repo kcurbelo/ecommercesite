@@ -1,0 +1,26 @@
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Size</th>
+    <th colspan="6"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <!-- Pay attention to loop the individual instance. Individual == "=" sign loop no "=" sign -->
+  <% @jackets.each do |jacket| %>
+      <tr>
+        <td><%= jacket.name %></td>
+        <td><%= jacket.price %></td>
+        <td><%= jacket.size %></td>
+        <td><%= link_to 'show', jacket %></tr>
+      <!--<td><%#= link_to 'Edit' %></td>-->
+      <!-- Trying to get a link to edit based off the id of the item in the row  -->
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New Jacket", "jackets/new" %>
