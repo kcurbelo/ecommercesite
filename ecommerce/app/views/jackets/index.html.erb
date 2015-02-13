@@ -1,3 +1,8 @@
+
+<body>
+
+<h1>Welcome to the store</h1>
+
 <table>
   <thead>
   <tr>
@@ -15,7 +20,9 @@
         <td><%= jacket.name %></td>
         <td><%= jacket.price %></td>
         <td><%= jacket.size %></td>
-        <td><%= link_to 'show', jacket %></tr>
+        <td><%= link_to 'show', jacket %></td >
+        <td><%= link_to 'Edit', edit_jacket_path(jacket) %></td>
+        <td><%= link_to 'Delete', jacket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <!--<td><%#= link_to 'Edit' %></td>-->
       <!-- Trying to get a link to edit based off the id of the item in the row  -->
       </tr>
@@ -24,3 +31,5 @@
 </table>
 
 <%= link_to "New Jacket", "jackets/new" %>
+
+</body>

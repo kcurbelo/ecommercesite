@@ -1,23 +1,24 @@
 Rails.application.routes.draw do
   #todo Ask about why when I use resources it works but when I don't it doesn't
-  # resources :jackets
+  resources :jackets
 
   root 'jackets#index'
-
-  get 'jackets' => 'jackets#index'
-
-  get 'jackets/new' => 'jackets#new'
-
-  post 'jackets/' => 'jackets#create'
-
-  get 'jackets/:id/edit' => 'jackets#edit'
-
-  patch 'jackets/:id' => 'jackets#update'
-
-  get 'jackets/:id' => 'jackets#show', as: :jacket
-  # get 'jackets/:id' => 'jackets#show', as: :beverage
-
-  delete 'jackets/:id' => 'jackets#destroy'
+  #
+  # get 'jackets' => 'jackets#index'
+  #
+  # get 'jackets/new' => 'jackets#new'
+  #
+  # post 'jackets/' => 'jackets#create'
+  #
+  # # resources :jackets, path_names: { edit: "edit_jacket" }
+  # # get '/jackets/:id/edit' => 'jackets#edit'
+  #
+  # patch 'jackets/:id' => 'jackets#update'
+  #
+  # get 'jackets/:id' => 'jackets#show', as: :jacket
+  # # get 'jackets/:id' => 'jackets#show', as: :beverage
+  #
+  # delete 'jackets/:id' => 'jackets#destroy'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
