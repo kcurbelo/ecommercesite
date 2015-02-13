@@ -8,7 +8,10 @@
 </head>
 <body>
 <!--FInd out which current i.d. is logged in-->
+<%= link_to 'Log out' %>
 <%= session["user_id"].inspect  %>
+
+
 <hr />
 <%= yield %>
 
