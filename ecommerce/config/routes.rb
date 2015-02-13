@@ -1,8 +1,28 @@
 Rails.application.routes.draw do
+  # get 'users/index'
+  #
+  # get 'users/show'
+  #
+  # get 'users/new'
+  #
+  # get 'users/create'
+  #
+  # get 'users/edit'
+  #
+  # get 'users/update'
+  #
+  # get 'users/destroy'
+
   #todo Ask about why when I use resources it works but when I don't it doesn't
   resources :jackets
 
   root 'jackets#index'
+
+
+  delete '/sessions' => 'sessions#destroy', as: 'logout'
+  resources :sessions, only: [:new, :create, :destroy]
+
+  resources :users, only: [:index, :new, :create, :show]
   #
   # get 'jackets' => 'jackets#index'
   #

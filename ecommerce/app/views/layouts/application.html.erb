@@ -7,7 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<!--FInd out which current i.d. is logged in-->
+<%= session["user_id"].inspect  %>
+<hr />
 <%= yield %>
 
 </body>
