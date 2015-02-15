@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'carts/new'
+
   # get 'users/index'
   #
   # get 'users/show'
@@ -18,11 +20,12 @@ Rails.application.routes.draw do
 
   root 'jackets#index'
 
-
   delete '/sessions' => 'sessions#destroy', as: 'logout'
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :users, only: [:index, :new, :create, :show]
+
+  resources :carts
   #
   # get 'jackets' => 'jackets#index'
   #

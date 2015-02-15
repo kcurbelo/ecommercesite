@@ -1,10 +1,23 @@
+<head>
+  <!--=========================Twitter Bootstrap=======================-->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
 <h1>Jackets#show</h1>
 <p>Find me in app/views/jackets/show.html.erb</p>
-
-
 
   <%= @jackets.name %>
 
   <%= @jackets.price %>
 
   <%= @jackets.size %>
+                                                     <!--Pass param of what object I am trying to pass through it... and use it in a from-->
+<%= link_to 'Add to cart, or buy now?', new_cart_path(@jacket) %>
+
+</body>

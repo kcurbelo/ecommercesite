@@ -1,6 +1,19 @@
+<head>
+  <!--=========================Twitter Bootstrap=======================-->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
 <h1>Sign up!</h1>
 
 <%= form_for @user do |f|%>
+    First name: <%= f.text_field :f_name %><br />
+    Last last: <%= f.text_field :l_name %><br />
     E-mail: <%= f.text_field :email %><br />
     Password: <%= f.password_field :password %><br />
     Password confirmation: <%= f.password_field :password_confirmation %><br />
@@ -8,3 +21,4 @@
     <%=f.submit %>
 
 <% end %>
+</body>

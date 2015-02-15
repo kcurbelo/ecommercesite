@@ -32,7 +32,6 @@ class JacketsController < ApplicationController
       render 'edit'
     end
   end
-#todo left off here
   def destroy
     @jacket = Jacket.find(params[:id])
     @jacket.destroy

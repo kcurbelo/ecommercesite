@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
     end
   end
 
-#todo redirect the login to the jackets page
   def create
     # raise params.inspect
     #Find the user by email
