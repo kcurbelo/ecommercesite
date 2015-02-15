@@ -14,9 +14,14 @@
 ActiveRecord::Schema.define(version: 20150213233258) do
 
   create_table "carts", force: true do |t|
+    t.integer  "jacket_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "carts", ["jacket_id"], name: "index_carts_on_jacket_id"
+  add_index "carts", ["user_id"], name: "index_carts_on_user_id"
 
   create_table "jacket_carts", force: true do |t|
     t.datetime "created_at", null: false
