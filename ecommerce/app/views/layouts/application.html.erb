@@ -8,8 +8,18 @@
 </head>
 <body>
 <!--FInd out which current i.d. is logged in-->
-<%= link_to 'Log out' %>
 <%= session["user_id"].inspect  %>
+<%= params.inspect %>
+<!-- Sign up and sign out buttons -->
+<% if current_user != nil %>
+This is the person who's logged in: <%= current_user.email %>
+<%= button_to "Log out", sessions_path, method: :delete %>
+redirect_to jackets_path
+
+<% else %>
+<%= button_to "Sign up", new_user_path, method: :get %> 
+<%= button_to "Log in", new_session_path, method: :get %>
+<% end %>
 
 
 <hr />

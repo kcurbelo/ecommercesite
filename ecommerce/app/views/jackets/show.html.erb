@@ -12,12 +12,18 @@
 <h1>Jackets#show</h1>
 <p>Find me in app/views/jackets/show.html.erb</p>
 
-  <%= @jackets.name %>
+  <%= @jacket.name %>
 
-  <%= @jackets.price %>
+  <%= @jacket.price %>
 
-  <%= @jackets.size %>
-                                                     <!--Pass param of what object I am trying to pass through it... and use it in a from-->
-<%= link_to 'Add to cart, or buy now?', new_cart_path(@jacket) %>
+  <%= @jacket.size %>
+
+
+<!-- This is saying that if there is someone logged in then use their info in the following "path that they will take when buying something" -->
+<% if current_user != nil %>
+<%= link_to 'Add to cart, or buy now?', new_cart_path(user_id: current_user.id, jacket_id: @jacket.id) %>
+<% else %>
+<%= link_to 'Add to cart, or buy now?', new_cart_path(jacket_id: @jacket.id) %>
+<% end %>
 
 </body>

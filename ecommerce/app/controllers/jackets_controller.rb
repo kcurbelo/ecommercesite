@@ -4,7 +4,7 @@ class JacketsController < ApplicationController
   end
 
   def show
-    @jackets = Jacket.find(params[:id])
+    @jacket = Jacket.find(params[:id])
   end
 
   def new

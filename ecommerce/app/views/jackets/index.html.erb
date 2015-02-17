@@ -34,16 +34,15 @@
         <td><%= jacket.size %></td>
         <td><%= link_to 'show', jacket %></td >
         <td><%= link_to 'Edit', edit_jacket_path(jacket) %></td>
+                                  <!-- "Jacket" is just whatever you used as the variable in the create jacket form" -->
         <td><%= link_to 'Delete', jacket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <!--<td><%#= link_to 'Edit' %></td>-->
-      <!-- Trying to get a link to edit based off the id of the item in the row  -->
       </tr>
   <% end %>
   </tbody>
 </table>
 
 <%= link_to "New Jacket", "jackets/new" %><br />
-<%= link_to "New User", "users/new" %>
-<%= link_to "Login", "sessions/new" %>
+<%#= link_to "New User", "users/new" %>
+<%#= link_to "Login", "sessions/new" %>
 
 </body>

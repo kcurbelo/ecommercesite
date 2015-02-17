@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'carts/new'
+
+  # get 'carts/new'
 
   # get 'users/index'
   #
